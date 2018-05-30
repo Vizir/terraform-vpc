@@ -7,12 +7,20 @@ variable "availability_zones" {
   }
 }
 
+variable "create_nat_gateway" {
+  default = false
+}
+
 variable "enable_dns_hostnames" {
   default = true
 }
 
 variable "enable_dns_support" {
   default = true
+}
+
+variable "private_subnets" {
+  default = {}
 }
 
 variable "subnets" {

@@ -17,3 +17,11 @@ output "subnet_ids" {
 output "vpc_id" {
   value = "${aws_vpc.main.id}"
 }
+
+output "private_subnets" {
+  value = "${var.private_subnets}"
+}
+
+output "private_subnets_ids" {
+  value = "${join(",", aws_subnet.private.*.id)}"
+}
